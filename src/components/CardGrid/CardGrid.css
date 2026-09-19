@@ -1,0 +1,21 @@
+.card-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-grid--auto {
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+
+@media (max-width: 1000px) {
+  .card-grid:not(.card-grid--auto) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .card-grid:not(.card-grid--auto) {
+    grid-template-columns: 1fr;
+  }
+}

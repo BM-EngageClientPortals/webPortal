@@ -1,0 +1,30 @@
+.detail-list {
+  margin: 20px 0 0;
+  display: grid;
+  gap: 4px;
+}
+
+.detail-list dt {
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-2);
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.detail-list dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.detail-list dt.is-emphasis {
+  color: var(--cyan);
+}
+
+.detail-list dd.is-emphasis {
+  color: var(--text);
+  font-weight: 500;
+}

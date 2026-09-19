@@ -1,0 +1,29 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  height: 40px;
+  width: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-name {
+  font: 800 19px/1 var(--font-head);
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+
+.brand-sub {
+  font: 500 9.5px/1 var(--font-head);
+  letter-spacing: 0.42em;
+  color: var(--muted);
+  margin-top: 5px;
+}

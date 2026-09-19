@@ -1,0 +1,145 @@
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.carousel-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+
+.carousel-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  border-color: var(--blue-2);
+  background: rgba(77, 163, 255, 0.14);
+}
+
+.carousel-btn:active {
+  transform: scale(0.94);
+}
+
+.carousel-btn--primary {
+  background: linear-gradient(135deg, var(--blue), #16a5d6);
+  border-color: transparent;
+  color: #fff;
+}
+
+.carousel-btn--primary:hover {
+  background: linear-gradient(135deg, var(--blue), #16a5d6);
+  border-color: transparent;
+  filter: brightness(1.12);
+}
+
+.carousel-count {
+  margin-left: 10px;
+  font: 500 14px/1 var(--font-head);
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  min-width: 64px;
+}
+
+.carousel-count strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.carousel-progress {
+  display: flex;
+  flex: 1;
+  gap: 6px;
+}
+
+.carousel-progress li {
+  flex: 1;
+}
+
+.segment {
+  display: block;
+  width: 100%;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.segment-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  background: rgba(157, 176, 211, 0.22);
+  overflow: hidden;
+  transition: background 0.2s ease;
+}
+
+.segment:hover .segment-track {
+  background: rgba(157, 176, 211, 0.4);
+}
+
+.segment-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--blue-2), var(--cyan));
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+.segment-fill.is-full {
+  transform: scaleX(1);
+}
+
+/* The timer: the fill animation IS the countdown. Pausing freezes it in place. */
+.segment-fill.is-timed {
+  animation: segment-progress linear forwards;
+  animation-play-state: running;
+}
+
+.segment-fill.is-timed.is-paused {
+  animation-play-state: paused;
+}
+
+@keyframes segment-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 560px) {
+  .carousel-controls {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .carousel-buttons {
+    width: 100%;
+  }
+
+  .carousel-count {
+    margin-left: auto;
+  }
+
+  .carousel-progress {
+    flex-basis: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+/* Design tokens. Change colours, fonts and radii here and the whole site follows. */
+:root {
+  --bg: #040b1a;
+  --bg-alt: #071229;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-hover: rgba(255, 255, 255, 0.07);
+  --line: rgba(120, 170, 255, 0.16);
+  --text: #e9effc;
+  --muted: #9db0d3;
+  --blue: #1e6fd9;
+  --blue-2: #4da3ff;
+  --cyan: #22d3ee;
+  --radius: 18px;
+  --font-head: 'Sora', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}

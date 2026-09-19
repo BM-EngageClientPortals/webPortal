@@ -1,0 +1,41 @@
+.cta-banner {
+  padding: 30px 0 110px;
+}
+
+.cta-banner-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px 40px;
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: radial-gradient(circle at 0% 0%, rgba(30, 111, 217, 0.32), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(34, 211, 238, 0.16), transparent 50%), var(--bg-alt);
+}
+
+.cta-banner-card h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cta-banner-card p {
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.cta-banner-card .btn {
+  flex: none;
+}
+
+@media (max-width: 760px) {
+  .cta-banner {
+    padding-bottom: 78px;
+  }
+
+  .cta-banner-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

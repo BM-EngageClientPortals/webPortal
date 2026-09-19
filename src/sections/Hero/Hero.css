@@ -1,0 +1,116 @@
+.hero {
+  position: relative;
+  padding: 150px 0 40px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  mask-image: linear-gradient(#000 72%, transparent);
+  -webkit-mask-image: linear-gradient(#000 72%, transparent);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+}
+
+.orb-a {
+  width: 520px;
+  height: 520px;
+  background: #1456c9;
+  top: -160px;
+  right: -80px;
+}
+
+.orb-b {
+  width: 420px;
+  height: 420px;
+  background: #0aa9c9;
+  bottom: -120px;
+  left: -120px;
+  opacity: 0.35;
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 10%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 10%, transparent 70%);
+  opacity: 0.55;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.eyebrow-pill {
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.07);
+  letter-spacing: 0.1em;
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-weight: 800;
+  margin: 22px 0 22px;
+}
+
+.lead {
+  font-size: clamp(1.02rem, 1.6vw, 1.2rem);
+  color: var(--muted);
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 34px 0 30px;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 640px;
+}
+
+.pills li {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-actions .btn {
+    flex: 1 1 auto;
+  }
+}

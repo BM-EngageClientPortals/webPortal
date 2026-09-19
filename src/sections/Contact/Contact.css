@@ -1,0 +1,20 @@
+.contact {
+  padding-top: 40px;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  padding: clamp(28px, 5vw, 56px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: radial-gradient(circle at 0% 0%, rgba(30, 111, 217, 0.3), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(34, 211, 238, 0.14), transparent 50%), var(--bg-alt);
+}
+
+@media (max-width: 1000px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+}

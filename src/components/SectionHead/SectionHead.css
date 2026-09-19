@@ -1,0 +1,21 @@
+.section-head {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+.section-head h1,
+.section-head h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+  font-weight: 700;
+  margin: 14px 0 14px;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* Second and later headings inside one section get extra breathing room. */
+.section-head:not(:first-child) {
+  margin-top: 96px;
+}

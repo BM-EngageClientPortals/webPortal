@@ -1,0 +1,13 @@
+.domain {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.domain .icon-badge {
+  margin-bottom: 0;
+}
+
+.domain h3 {
+  font-size: 1.08rem;
+}

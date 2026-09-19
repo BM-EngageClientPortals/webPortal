@@ -1,0 +1,37 @@
+/* Leave room for the fixed navigation bar (72px). */
+.page {
+  padding-top: 72px;
+  animation: page-in 0.45s ease both;
+}
+
+.page--home {
+  padding-top: 0;
+}
+
+/* The first block of an inner page acts as its title area, so it needs less air above it. */
+.page > .section:first-child {
+  padding-top: 64px;
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page {
+    animation: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .page > .section:first-child {
+    padding-top: 44px;
+  }
+}
